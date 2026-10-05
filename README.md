@@ -1,5 +1,7 @@
 # Streaming Data for Predictive Maintenance with Linear Regression-Based Alerts
 
+.env file sent via email
+
 **Author:** Sultan Atanda (9114837)
 
 Practical Lab 1, built on the Data Streaming Workshop pipeline. Robot current readings for eight axes are stored in a Neon PostgreSQL database. A linear regression (time to current) is trained per axis from the database on the readings where the machine is running, the residuals are used to discover alert and error thresholds, and a synthetic test stream is replayed through the database while an alert module watches it. Alerts and errors are logged to a CSV and a database table and shown on a dashboard with month, day and hour filters.
@@ -11,7 +13,7 @@ Practical Lab 1, built on the Data Streaming Workshop pipeline. Robot current re
 .
 ├── Practical_Lab_1.ipynb        main notebook (run top to bottom)
 ├── requirements.txt
-├── .env.example                 copy to .env and add the Neon connection string
+├── .env                         Not committed (sent via email)
 ├── data/
 │   ├── robot_data.csv           training data (Trait, Axis #1-#14, Time), 39,672 readings
 │   ├── synthetic_test.csv       generated 48 h test stream
